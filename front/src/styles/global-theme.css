@@ -1,0 +1,218 @@
+/* Global Theme System - Tourist Safety App */
+
+/* Root Variables for Consistent Theme */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-color: #667eea;
+  --secondary-color: #764ba2;
+  --accent-color: #ffffff;
+  --text-light: #ffffff;
+  --text-dark: #1f2937;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --border-radius: 10px;
+  --header-height: 60px;
+}
+
+/* Global Container Styles */
+.app-container, 
+.dashboard-container,
+.login-container,
+.registration-container,
+.police-container,
+.tourist-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: var(--primary-gradient);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+/* Global Header Styles */
+.app-header,
+.dashboard-header,
+.police-header,
+.tourist-header {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--glass-border);
+  height: var(--header-height);
+  color: var(--text-light);
+}
+
+/* Global Card Styles */
+.card,
+.dashboard-card,
+.info-card,
+.stat-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-light);
+}
+
+.card:hover,
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Global Button Styles */
+.btn-primary,
+.logout-btn,
+.action-btn {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-light);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-primary:hover,
+.logout-btn:hover,
+.action-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Global Form Styles */
+.form-container {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  color: var(--text-light);
+  box-shadow: var(--shadow-medium);
+}
+
+.form-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
+  color: var(--text-light);
+  padding: 0.75rem;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Global Text Styles */
+.text-light {
+  color: var(--text-light);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Global Layout Utilities */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Global Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(20px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header,
+  .dashboard-header,
+  .police-header,
+  .tourist-header {
+    padding: 0.5rem 1rem;
+    height: 50px;
+  }
+  
+  .form-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .grid-auto {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Override specific component styles to use global theme */
+.login-form {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
+.police-dashboard {
+  background: var(--primary-gradient) !important;
+}
+
+.tourist-app {
+  background: var(--primary-gradient) !important;
+}
+
+/* Ensure all pages use the theme */
+body, html, #root {
+  background: var(--primary-gradient);
+  margin: 0;
+  padding: 0;
+}

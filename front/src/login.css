@@ -1,0 +1,147 @@
+/* login.css - updated */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  padding: 20px;
+}
+
+.gov-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.gov-emblem {
+  margin-bottom: 1rem;
+}
+
+.portal-title {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.portal-subtitle {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-title {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.login-form {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.login-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.login-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.login-links {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.login-links a {
+  color: #667eea;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+.gov-footer {
+  margin-top: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.error-message {
+  background: #fee;
+  color: #c33;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #c33;
+}
+
+.demo-credentials {
+  margin-top: 1rem;
+  padding: 10px;
+  background: #f0f8ff;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.demo-credentials p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
