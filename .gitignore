@@ -49,3 +49,5 @@ pnpm-debug.log*
 .idea/
 *.swp
 Thumbs.db
+# Ignore zip or archive files
+*.zip
